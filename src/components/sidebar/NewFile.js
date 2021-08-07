@@ -38,21 +38,27 @@ const NewFile = () => {
     const [uploading, setUploading] = useState(false)
 
     const handleOpen = () => {
-        setOpen(true);
+        setOpen(true); 
+        //alert(" Upload Image/PDF file only less than 2MB")
     };
 
     const handleClose = () => {
         setOpen(false);
+        //alert(" Upload Image/PDF file only less than 2MB")
     };
 
     const handleChange = (e) => {
         if (e.target.files[0]) {
             setFile(e.target.files[0])
+            //alert(" Upload Image/PDF file only less than 2MB")
+            
         }
+        
     }
 
     const handleUpload = () => {
         setUploading(true)
+        alert(" Upload Image/PDF file only less than 2MB")
 
         storage.ref(`files/${file.name}`).put(file).then(snapshot => {
             console.log(snapshot)

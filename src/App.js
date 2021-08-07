@@ -13,7 +13,7 @@ function App() {
   // const [user, setUser] = useState()
   const [user, setUser] = useState()
 
-  const handleLogin = () => {
+  const handleLogin = () => {    // Google Authentication
     if (!user) {
       auth.signInWithPopup(provider).then((result) => {
         setUser(result.user)
