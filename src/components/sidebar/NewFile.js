@@ -39,11 +39,13 @@ const NewFile = () => {
 
     const handleOpen = () => {
         setOpen(true); 
+       // alert(" Uploaded Successfully")
        
     };
 
     const handleClose = () => {
         setOpen(false);
+        
        
     };
 
@@ -71,11 +73,13 @@ const NewFile = () => {
                     caption: file.name,
                     fileUrl: url,
                     size: snapshot._delegate.bytesTransferred,
+                    
                 })
 
                 setUploading(false)
                 setOpen(false)
                 setFile(null)
+                alert(" Uploaded Successfully")
             })
 
             storage.ref('files').child(file.name).getMetadata().then(meta => {
