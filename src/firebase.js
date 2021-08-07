@@ -16,4 +16,9 @@ const provider = new firebase.auth.GoogleAuthProvider()
 const storage = firebase.storage()
 const db = firebaseApp.firestore()
 
+firebase.database().ref().set({
+  name: "drive-clone-455a1",
+})
+
+
 export { auth, provider, db, storage }

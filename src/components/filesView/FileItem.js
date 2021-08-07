@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../styles/FileItem.css'
+import FileSaver from 'file-saver';
+
 
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
@@ -19,6 +21,11 @@ const FileItem = ({ id, caption, timestamp, fileUrl, size }) => {
         return Math.max(fileSizeInBytes, 0.1).toFixed(1) + byteUnits[i];
     };
 
+    const saveFile = (url) => {
+        FileSaver.saveAs(
+            process.env.PUBLIC_URL + {url},"Untitled File");
+    };
+
     return (
         <div className='fileItem'>
             <a href={fileUrl} target="_blank" download>
@@ -27,7 +34,15 @@ const FileItem = ({ id, caption, timestamp, fileUrl, size }) => {
                     <p>{caption}</p>
                 </div>
                 <div className="fileItem--right">
+
+                <button className="cv" onClick={saveFile}>
+                        Download File
+                    </button>
+
                     <p>{fileDate}</p>
+                    
+                   
+
                     <p>{getReadableFileSizeString(size)}</p>
                 </div>
             </a>
