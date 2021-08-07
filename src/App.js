@@ -11,13 +11,7 @@ import { useState } from 'react';
 
 function App() {
   // const [user, setUser] = useState()
-  const [user, setUser] = useState({
-    displayName: "Imran Khan",
-    email: "imran.techwiz@gmail.com",
-    emailVerified: true,
-    phoneNumber: null,
-    photoURL: "https://img-premium.flaticon.com/png/512/5192/premium/5192938.png?token=exp=1628276657~hmac=4da11371ab64fd940bc4cbddb1e8fde1"
-  })
+  const [user, setUser] = useState()
 
   const handleLogin = () => {
     if (!user) {
@@ -48,8 +42,8 @@ function App() {
           </>
         ) : (
             <div className='app__login'>
-              <img src={DriveLogo} alt="Google Drive" />
-              <button onClick={handleLogin}>Log in to Google Drive</button>
+              <img src={DriveLogo} alt="Drive" />
+              <button onClick={handleLogin}>Log in to Drive</button>
             </div>
           )
       }
