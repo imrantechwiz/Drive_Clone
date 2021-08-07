@@ -1,7 +1,7 @@
 # Drive_Clone
 
  ### Made Using ReactJS, NodeJS, Firebase, Material-UI.
-
+ #### It accepts only image and PDF type files upto the limit of 2MB only.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
