@@ -39,18 +39,18 @@ const NewFile = () => {
 
     const handleOpen = () => {
         setOpen(true); 
-        //alert(" Upload Image/PDF file only less than 2MB")
+       
     };
 
     const handleClose = () => {
         setOpen(false);
-        //alert(" Upload Image/PDF file only less than 2MB")
+       
     };
 
     const handleChange = (e) => {
         if (e.target.files[0]) {
             setFile(e.target.files[0])
-            //alert(" Upload Image/PDF file only less than 2MB")
+           
             
         }
         
